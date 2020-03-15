@@ -17,3 +17,7 @@ end
 end
 return cash
 end
+
+def pets_sold(location)
+  return location[:admin][:pets_sold]
+end
