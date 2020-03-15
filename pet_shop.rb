@@ -57,3 +57,7 @@ def remove_pet_by_name(location, name)
 def add_pet_to_stock(location, pet_to_add)
   return location[:pets].push(pet_to_add)
 end
+
+def customer_cash(customer)
+  return customer[:cash]
+end
