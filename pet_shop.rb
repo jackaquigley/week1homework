@@ -21,3 +21,7 @@ def increase_pets_sold(location, pets_increase)
   change_pets = pets_increase + @pet_shop[:admin][:pets_sold]
   @pet_shop[:admin][:pets_sold] = change_pets
 end
+
+def stock_count(location)
+return @pet_shop[:pets].length
+end
