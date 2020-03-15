@@ -31,17 +31,9 @@ def pets_by_breed(location, breed)
   for pet in location[:pets]
     if pet[:breed] == breed
       breed_array << pet
+    else
+      return nil
     end
   end
   return breed_array
-end
-
-def find_pet_by_name(location, name)
-  for pet in pet_shop[:pets]
-    if pet[:name] == name
-      return pet
-    end
-  end
-else
-  return nil
 end
