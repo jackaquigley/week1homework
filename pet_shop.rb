@@ -44,3 +44,16 @@ def find_pet_by_name(location, name)
     end
     return nil
 end
+
+def remove_pet_by_name(location, name)
+  for pet in location[:pets]
+    if pet[:name] == name
+      return location[:pets].delete(pet)
+    end
+  end
+    return nil
+  end
+
+def add_pet_to_stock(location, pet_to_add)
+  return location[:pets].push(pet_to_add)
+end
