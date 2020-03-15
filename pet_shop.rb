@@ -8,14 +8,9 @@ def total_cash(location)
   return sum
 end
 
-def add_or_remove_cash(location, cash_to_add)
-cash = 0
-for sum in location[:admin]
-  for total in sum[:total_cash]
-  cash += total
-end
-end
-return cash
+def add_or_remove_cash(name, amount)
+  sum_of_cash = amount + @pet_shop[:admin][:total_cash]
+  @pet_shop[:admin][:total_cash] = sum_of_cash
 end
 
 def pets_sold(location)
