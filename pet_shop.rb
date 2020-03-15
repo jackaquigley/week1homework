@@ -8,11 +8,16 @@ def total_cash(location)
   return sum
 end
 
-def add_or_remove_cash(name, amount)
+def add_or_remove_cash(location, amount)
   sum_of_cash = amount + @pet_shop[:admin][:total_cash]
   @pet_shop[:admin][:total_cash] = sum_of_cash
 end
 
 def pets_sold(location)
   return location[:admin][:pets_sold]
+end
+
+def increase_pets_sold(location, pets_increase)
+  change_pets = pets_increase + @pet_shop[:admin][:pets_sold]
+  @pet_shop[:admin][:pets_sold] = change_pets
 end
